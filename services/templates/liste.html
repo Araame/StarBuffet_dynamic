@@ -2,6 +2,6 @@
 <div>
 <h2>{{traiteur.nomcomplet}}</h2>
 <p>{{traiteur.specialites}}</p>
-<button type="button">Voir profil</button>
+<a href="{% url 'detail_traiteur' traiteur.id %}" class="button">Voir profil</a>
 </div>
 {% endfor %}

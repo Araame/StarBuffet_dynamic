@@ -10,4 +10,4 @@ class Traiteur(models.Model):
     email = models.EmailField()
     datedecreation = models.DateField()
     telephone = models.CharField()
-    image = models.URLField()
+    image = models.URLField(blank=True)
