@@ -1,0 +1,297 @@
+/*MEDIA QUERIES POUR MOBILE */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+  }
+
+  header .logo img {
+    width: 150px;
+    height: 50px;
+  }
+
+  label {
+    display: flex;
+    justify-content: end;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    height: auto;
+  }
+
+  header nav,
+  header .sign {
+    display: none;
+  }
+
+  .main {
+    height: 70vh;
+    background: url("images/banner-head-accueil.jpg") center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #e65100;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main .content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    height: 50vh;
+    gap: 2px;
+    padding: 2%;
+    width: 100%;
+  }
+
+  .banner_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+
+  .banner_text h1,
+  .banner_text p {
+    color: #fff;
+    font-size: 1em;
+    width: 80%;
+  }
+
+
+  .banner_text h1 {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .second_banner {
+    width: 100%;
+    height: 40%;
+  }
+
+  .second_banner img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    left: 0;
+    position: relative;
+  }
+
+
+
+  .second_banner_text p {
+    width: 25vw;
+    height: 3vh;
+    background-color: gainsboro;
+    border-radius: 15px;
+    position: absolute;
+    top: 2%;
+    right: -15px;
+    font-size: 1em;
+
+  }
+
+
+  .second_banner_text {
+    position: absolute;
+    font-size: 0.5em;
+    top: 10px;
+    left: 50px;
+    width: 10%;
+    height: 2%;
+  }
+
+  .stats {
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond;
+  }
+
+  .stats_cards {
+    padding: 1%;
+    gap: 5px;
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+  }
+
+
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 2px rgb(95, 94, 94);
+    width: 90%;
+    height: 70%;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+
+.localisation h2{
+text-align: center;
+}
+  iframe {
+    border-radius: 15px;
+    width: 70%;
+  }
+
+  .services {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4%;
+    height: auto;
+  }
+
+  .services_content {
+    width: 100%;
+    height: 80%;
+  }
+
+  .services p {
+    text-align: center;
+  }
+
+  .services_cards {
+    gap: 1%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .service_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff3e0;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    height: auto;
+    gap: 2%;
+    padding: 3%;
+    width: 70%;
+    height: 50%;
+  }
+
+  .testimonies {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+    height: 80vh;
+    width: 90%;
+  }
+
+  .testimonies_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    height: auto;
+    width: 100%;
+
+  }
+
+  .testimony {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 3px 2px rgb(95, 94, 94);
+  }
+
+  .testimony_text {
+    color: gray;
+  }
+
+  .author {
+    display: flex;
+    justify-content: space-between;
+    gap: 1%;
+  }
+
+  .author h5 {
+    text-align: center;
+  }
+
+  .icone {
+    border-radius: 50%;
+
+
+  }
+
+  .cta {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    background: url("images/banner-head-accueil.jpg") center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #e65100;
+  }
+
+  .cta_btn {
+    background-color: #fff;
+    color: #ffb300;
+    font-weight: bold;
+    width: 250px;
+    height: 60px;
+    justify-content: center;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(1, 1, 18);
+    color: #fff;
+    gap: 10px;
+    height: auto;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  .footer p {
+    font-weight: bold;
+  }
+
+  .footer ul li {
+    color: gray;
+  }
+}

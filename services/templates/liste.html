@@ -1,7 +1,74 @@
-{% for traiteur in traiteurs %}
-<div>
-<h2>{{traiteur.nomcomplet}}</h2>
-<p>{{traiteur.specialites}}</p>
-<a href="{% url 'detail_traiteur' traiteur.id %}" class="button">Voir profil</a>
-</div>
-{% endfor %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+      <div class="traiteur_main_content">
+        <h1>Nos Traiteurs</h1>
+        <p>
+          Découvrez nos traiteurs professionnels pour vos évènements, mariages,
+          baptemes et <br />
+          réceptions.
+        </p>
+      </div>
+    </main>
+
+    <section class="traiteurs_section">
+      <div class="filters">
+        <h2>Filtres</h2>
+        <div class="filter">
+          <p>Spécialité</p>
+          <select name="specialite" id="specialite">
+            <option value="Toutes les spécialités">
+              Toutes les spécialités
+            </option>
+          </select>
+        </div>
+
+        <div class="filter">
+          <p>Statut</p>
+          <select name="statut" id="statut">
+            <option value="Statut">Statut</option>
+          </select>
+        </div>
+
+        <div class="filter_btn">
+          <button class="btn btn1">
+            <i class="fa-solid fa-filter"></i> Filtrer
+          </button>
+          <button class="btn btn2">
+            <i class="fa-solid fa-rotate-right"></i>Réinitialiser
+          </button>
+        </div>
+      </div>
+
+      <div class="traiteurs">
+      {% for traiteur in traiteurs %}
+
+        <div class="traiteur">
+          <img src="{{ traiteur.image_url|default_if_none:'#' }}" />
+        
+            <div class="traiteur_content">
+                <div class="first_line">
+                    <h3><i class="fa-solid fa-circle"></i>{{traiteur.nomcomplet}}</h3>
+                    <p><i class="fa-solid fa-star"></i>0.0</p>
+                </div>
+                <p>{{traiteur.nomcomplet}}</p>
+                <p><strong>Spécialités :</strong></p>
+                <div class="specialite">
+                  <p>{{traiteur.specialites}}</p>
+                </div>
+            </div>
+
+            <div class="last_line">
+                <p>{{traiteur.telephone}}</p>
+              <button class="see_profile"><a href="{% url 'detail_traiteur' traiteur.id %}">Voir profil</a></button>
+            </div>
+        </div>
+      {% endfor %}
+
+
+    </div>
+</main>
+
+{% endblock %}

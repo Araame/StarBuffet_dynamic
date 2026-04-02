@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins" sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+}
+
+label {
+    display: none;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 80px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+
+nav ul li,
+.footer ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #FFF;
+    background-color: #E65100;
+    border-radius: 10px;
+
+}
+
+.sign button {
+    width: 150px;
+    height: 50px;
+}
+
+.sign .signin,
+.sign .signup {
+    background-color: transparent;
+    border: 0;
+    color: gray;
+}
+
+.sign button:hover {
+    background-color: #E65100;
+    color: #FFF;
+    border: 0;
+    border-radius: 15px;
+}
+
+
+.sign button a {
+    text-decoration: none;
+}
+
+
+
+/*DETAILS PAGE*/
+
+.detail_main {
+    background-color: #f5f5dc;
+    padding: 2%;
+}
+
+
+.banner {
+    background: url("images/traiteur1_pic.webp") center/cover;
+    border-radius: 10px;
+    position: relative;
+    height: 40vh;
+}
+
+.badge {
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.fa-check {
+    background-color: green;
+    color: gray;
+    border-radius: 50%;
+}
+
+.contact_detail a {
+    text-decoration: none;
+    color: #000;
+}
+
+.detail_card {
+    background-color: #FFF;
+    box-shadow: 2px 2px 2px 1px rgba(90, 88, 88, 0.029);
+    padding: 4%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    height: 30vh;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2%;
+    margin-top: 20px;
+    height: 100vh;
+}
+
+.details_content_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    height: 48%;
+}
+
+.detail_content_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    height: 58%;
+}
+
+.services_detail {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+
+.services_detail ul li {
+    list-style: none;
+}
+
+.services_detail .fa-check {
+    background-color: transparent;
+    color: green;
+}
+
+.btn_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.btn_contact {
+    width: 95%;
+    height: 70%;
+    background-color: blue;
+    border-radius: 10px;
+    border: 0;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.btn_ i {
+    color: #FFF;
+}
+
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(1, 1, 18);
+    color: #FFF;
+    gap: 10px;
+    height: 250px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+}
+
+.footer p {
+    font-weight: bold;
+}
+
+.footer ul li {
+    color: gray;
+}

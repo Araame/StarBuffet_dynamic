@@ -10,4 +10,11 @@ class Traiteur(models.Model):
     email = models.EmailField()
     datedecreation = models.DateField()
     telephone = models.CharField()
-    image = models.URLField(blank=True)
+    image = models.ImageField(upload_to='images/')
+
+
+
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url

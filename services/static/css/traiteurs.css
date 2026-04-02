@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins" sans-serif;
+}
+
+
+/* Header */
+header {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    height: 3vh;
+}
+
+label {
+    display: none;
+}
+
+
+.logo {
+    width: 15%;
+    margin-left: 2%;
+
+}
+
+
+.logo img {
+    width: 35%;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav ul li,
+.footer ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5em;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #E65100;
+    border-radius: 5px;
+    text-decoration: underline #E65100;
+}
+
+.sign {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.sign a {
+    text-decoration: none;
+    border: 0;
+    color: gray;
+    font-size: 1.5em;
+    height: 18%;
+
+}
+
+
+
+.sign a:hover {
+    background-color: #E65100;
+    color: #FFF;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* TRAITEURS PAGE */
+
+/* MAIN */
+.traiteur_main_content {
+    height: 50vh;
+    background: url("images/banner-caterers.jpg") center/cover;
+    background-color: #E65100;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.traiteur_main_content p {
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+.traiteur_main_content h1 {
+    color: #FFF;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
+/* TRAITEURS SECTION */
+.traiteurs_section {
+    background-color: #FFF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+.filters {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2%;
+    width: 80%;
+
+}
+
+
+.filter_btn {
+    width: 30%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    background-color: #E65100;
+    border: 0;
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+
+}
+
+.btn1 {
+    background-color: #E65100;
+    color: white;
+}
+
+.btn2 {
+    background-color: white;
+}
+
+
+.filter {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.filter select {
+    background-color: white;
+    border-radius: 10px;
+    width: 20vw;
+    height: 5vh;
+}
+
+.filter p {
+    color: rgb(50, 49, 49);
+}
+
+
+.traiteurs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2%;
+    width: 80%;
+    margin-top: 1%;
+}
+
+
+.traiteurs img {
+    width: 15%;
+    height: 20vh;
+    border-radius: 15px;
+}
+
+
+
+.traiteur {
+    display: flex;
+    background-color: #FFF;
+    border-radius: 15px;
+    height: auto;
+}
+
+.traiteur_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    padding: 1%;
+}
+
+
+.first_line {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.first_line h3 {
+    font-size: 1.3em;
+}
+
+.specialite {
+    display: flex;
+    gap: 1%;
+}
+
+.specialite p {
+    background-color: gainsboro;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5%;
+}
+
+.last_line {
+    display: flex;
+    justify-content: space-between;
+    height: 25%;
+}
+
+.last_line a {
+    background-color: black;
+    border: 0;
+    border-radius: 10px;
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+
+/* CTA */
+.cta {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url("images/banner-head-accueil.jpg") center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #E65100;
+}
+
+.cta a {
+    background-color: #FFF;
+    color: #E65100;
+    font-weight: bold;
+    width: 15%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.cta h2,
+.cta p {
+    color: #FFF;
+    text-align: center;
+    font-size: 2em;
+}
+
+.cta p {
+    font-size: 1.2em;
+}
+
+
+/* Footer */
+
+footer {
+    height: auto;
+    background-color: rgb(1, 1, 18);
+    color: #FFF;
+    gap: 1%;
+}
+
+
+footer p {
+    font-size: 1.3em;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 1%;
+    width: 100%;
+
+
+}
+
+.footer p {
+    font-size: 1.5em;
+}
+
+.footer ul li {
+    font-size: 1.3em;
+}
+
+.footer ul li {
+    color: gray;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}

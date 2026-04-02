@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<header>
+      <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="logo StarBuffet" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">Accueil</a></li>
+          <li><a href="#Restaurants">Restaurants</a></li>
+          <li><a href="#CoursDeCuisine">Cours de Cuisine</a></li>
+          <li><a href="{% url 'liste_traiteurs' %}">Traiteurs</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% endif %}
+
+        </ul>
+      </nav>
+
+      <div class="sign">
+        {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="signin" type="submit">Déconnexion</button>
+            </form>
+        {% else %}
+            <button class="signin"><a href="{% url 'login' %}">Connexion</a></button>
+        {% endif %}
+      </div>
+    </header>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+      <footer>
+        <div class="footer">
+            <div class="about_us">
+                <p>A propos</p><br>
+                <ul>
+                    <li>Qui sommes-nous</li>
+                    <li>Contact</li>
+                    <li>Mentions légales</li>
+                    <li>Politique de confidentialité</li>
+                </ul>
+            </div>
+            <div class="services_footer">
+                <p>Services</p><br>
+                <ul>
+                    <li>Traiteurs</li>
+                    <li>Restaurants</li>
+                    <li>Cours de Cuisine</li>
+                </ul>
+            </div>
+            <div class="pro_space">
+                <p>Espace Pro</p><br>
+                <ul>
+                    <li>Devenez partenaire</li>
+                    <li>Connexion</li>
+                    <li>FAQ Professionels</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <p>Contact</p><br>
+                <ul>
+                    <li>StarBuffet</li>
+                    <li>Dakar Senegal</li>
+                    <li>Tel: +221 77 000 00 00</li>
+                    <li>Email : contact@starbuff.com</li>
+                    <li><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-solid fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy;2025 StarBuffet. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

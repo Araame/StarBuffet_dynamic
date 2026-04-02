@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins" sans-serif;
+}
+
+
+/* Header */
+header {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    height: 3vh;
+}
+
+label {
+    display: none;
+}
+
+
+.logo {
+    width: 15%;
+    margin-left: 2%;
+
+}
+
+
+.logo img {
+    width: 35%;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav ul li,
+.footer ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5em;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #E65100;
+    border-radius: 5px;
+    text-decoration: underline #E65100;
+}
+
+.sign {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.sign a {
+    text-decoration: none;
+    border: 0;
+    color: gray;
+    font-size: 1.5em;
+    height: 18%;
+
+}
+
+
+
+.sign a:hover {
+    background-color: #E65100;
+    color: #FFF;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+
+
+/* CONTACT PAGE */
+.traiteur_main_content {
+    height: 30vh;
+    background: url("images/banner-caterers.jpg") center/cover;
+    background-color: #E65100;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+.traiteur_main_content h1{
+    font-size: 2em;
+}
+
+
+.traiteur_main_content p{
+    font-size: 1.2em;
+}
+
+.form_content {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(90, 88, 88, 0.029);
+    height: 80vh;
+    color: black;
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 40%;
+    height: 90%;
+}
+
+.form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    color: black;
+}
+
+
+.form input,
+textarea,
+#categorie select {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form input:focus,
+textarea:focus {
+    background-color: lightskyblue;
+}
+
+.basic_infos,
+.infos_contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.infos_pro {
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+
+
+.services_traiteur_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.services_traiteur_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.services_traiteur_2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.traiteur_card {
+    padding: 1%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(90, 88, 88, 0.029);
+}
+
+.submit_btn btn {
+    cursor: pointer;
+    
+}
+
+.submit_btn .btn:hover {
+    cursor: pointer;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.photo button {
+    background-color: hsl(37, 59%, 60%);
+    color: #E65100;
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    width: 150px;
+}
+
+
+/* Footer */
+
+footer {
+    height: auto;
+    background-color: rgb(1, 1, 18);
+    color: #FFF;
+    gap: 1%;
+}
+
+
+footer p {
+    font-size: 1.3em;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 1%;
+    width: 100%;
+
+
+}
+
+.footer p {
+    font-size: 1.5em;
+}
+
+.footer ul li {
+    font-size: 1.3em;
+}
+
+.footer ul li {
+    color: gray;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}

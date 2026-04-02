@@ -1,7 +1,77 @@
-<div>
-    <h2>{{traiteur.nomcomplet}}</h2>
-    <p>{{traiteur.specialites}}</p>
-    <p>{{traiteur.description}}</p>
-    <p>{{traiteur.contact}}</p>
-    <p>{{traiteur.adresse}}</p>
-</div>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+
+<main class="detail_main">
+      <div class="banner">
+          <div class="badge">
+            <p><i class="fa-solid fa-star"></i> 0.0/5</p>
+            <p><i class="fa-solid fa-check"></i> Vérifié</p>
+          </div>
+      </div>
+
+      <div class="details">
+        <div class="details_content_1">
+          <div class="about detail_card">
+                  <p><strong>A propos</strong></p>
+            <p>{{traiteur.nomcomplet}}</p>
+          </div>
+          <div class="specialite_detail detail_card">
+                  <p><strong>Spécialités</strong></p>
+            <div class="specialite">
+              <p>{{traiteur.specialites}}</p>
+            </div>
+          </div>
+          <div class="detail_card">
+            <p><strong>Services proposés</strong></p>
+            <div class="services_detail">
+            <div class="traiteur_detail1">
+
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Mariage</li>
+                <li><i class="fa-solid fa-check"></i> Cocktails</li>
+              </ul>
+            </div>
+            <div class="traiteur_detail2">
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Anniversaire</li>
+                <li><i class="fa-solid fa-check"></i> Cuisine sur mesure</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail_content_2">
+          <div class="contact_detail detail_card">
+            <p><strong>Contact</strong></p>
+            <p><i class="fa-solid fa-location-dot"></i>{{traiteur.adresse}}</p>
+            <a href="tel:{{traiteur.telephone}}"><i class="fa-solid fa-phone"></i>{{traiteur.telephone}}</a>
+            <a href="mailto:{{traiteur.email}}"><i class="fa-solid fa-envelope"></i>{{traiteur.email}}</a>
+          </div>
+
+          <div class="xp_detail detail_card">
+                  <p><strong>Année d'expérience</strong></p>
+            <p><i class="fa-solid fa-folder-closed"></i>{{traiteur.adresse}}</p>
+          </div>
+          <div class="langues detail_card">
+          <p><strong>Langues parlées</strong></p>
+            <div class="specialite">
+              <p>Français</p>
+              <p>Italien</p>
+              <p>Arabe</p>
+            </div>
+          </div>
+          <div class="detail_card btn_ ">
+                <button class="btn_contact"><i class="fa-solid fa-phone"></i> Contacter</button>
+            </div>
+        </div>
+      </div>
+    </main>
+
+{% endblock %}
+

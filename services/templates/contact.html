@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{{ block.super}}
+    <main>
+      <div class="traiteur_main_content">
+        <h1>Devenir Traiteur</h1>
+        <p>
+          Rejoignez notre plateforme et augmentez vos activités de traiteur.
+        </p>
+      </div>
+    </main>
+
+    <section class="form_content">
+      <div class="content2">
+        <form action="{% url 'ajout' %}" method="post" enctype="multipart/form-data"  class="form">
+        {% csrf_token %}
+          <div class="traiteur_card">
+            <p><strong>Informations de base</strong></p>
+            <div class="basic_infos">
+              <div>
+                <label>Nom complet</label><br>
+                <input type="text" name="nomcomplet">
+              </div>
+
+              <div>
+                <label>Specialites</label>
+                <input type="text" name="specialites">
+              </div>
+
+              <div>
+                <label>Email</label><br>
+                <input type="email" name="email">
+              </div>
+              <div>
+                <label>Description</label
+                ><br >
+                <input type="text" name="description">
+              </div>
+              <div>
+                <label>Date de création</label
+                ><br >
+                <input type="date" name="datedecreation">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="traiteur_card">
+            <p><strong>Informations de contact</strong></p>
+            <div class="infos_contact">
+              <div>
+                <label>Télèphone</label>
+                <input type="tel" name="telephone">
+              </div>
+              <div>
+                <label>Adresse</label>
+                <input type="text" name="adresse">
+              </div>
+              <div>
+                <label>Image</label>
+                <input type="file" name="image">
+              </div>
+            </div>
+          </div>
+          <input class="btn btn1" type="submit" value="Ajouter">
+
+  
+        </form>
+        <div class="submit_btn">
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
