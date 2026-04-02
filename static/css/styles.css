@@ -403,7 +403,6 @@ footer {
 /* MAIN */
 .traiteur_main_content {
     height: 50vh;
-    background: url("images/banner-caterers.jpg") center/cover;
     background-color: #E65100;
     background-blend-mode: multiply;
     display: flex;
@@ -424,6 +423,7 @@ footer {
     background-color: #FFF3E0;
     align-items: center;
     padding: 1%;
+    height: 100%;
 }
 
 .filters {
@@ -471,7 +471,7 @@ footer {
 }
 
 
-.groupe_traiteurs {
+.traiteurs {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -482,8 +482,8 @@ footer {
 
 
 .traiteurs img {
-    width: 10%;
-    height: 5%;
+    width: 50%;
+    height: 100%;
     border-radius: 15px;
 }
 
@@ -494,11 +494,19 @@ footer {
     flex-direction: row;
     background-color: #FFF;
     border-radius: 15px;
+    height: 20vh;
 }
-
-.traiteur_content {
+.traiteur {
     display: flex;
     flex-direction: column;
+    background-color: #FFF;
+    border-radius: 15px;
+    height: 40vh;
+
+}
+.traiteur_main {
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     width: 70%;
     padding: 5px;

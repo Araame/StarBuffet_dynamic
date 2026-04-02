@@ -3,7 +3,17 @@
 
 {% block content %}
 <title>{% block title %} Accueil {% endblock %}</title>
+<style>
+.cta{
+    background: url("{%static 'images/banner-head-accueil.jpg' %}") center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #E65100;
+}
+.main{
+    background: url("{%static 'images/banner-head-accueil.jpg' %}") center/cover;
+}
 
+</style>
 <main>
         <div class="main">
             <div class="content">

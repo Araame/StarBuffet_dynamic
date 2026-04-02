@@ -1,15 +1,15 @@
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 
   {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
+    <p>Nom d'utilisateur/mot de passe incorrect. Réessayez</p>
   {% endif %}
 
   {% if next %}
     {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
+      <p>Vous n'avez pas accès à cette page.</p>
     {% else %}
-      <p>Please login to see this page.</p>
+      <p>Connectez vous pour visiter cette page/</p>
     {% endif %}
   {% endif %}
 
@@ -17,9 +17,11 @@
 
 <main class="login">
       <form method="post">
-      {% csrf_token %}
-      {{ form.as_p}}
-        <p><button type="submit">connexion</button></p>
+        <h1>Connexion</h1>
+        {% csrf_token %}
+          {{ form.as_p}}
+        <p><button type="submit">Se connecter</button></p>
       </form>
 
 </main>
+

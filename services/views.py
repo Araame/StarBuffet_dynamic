@@ -44,7 +44,7 @@ def ajouter_traiteur(request):
             email = request.POST.get("email")
             telephone = request.POST.get("telephone")
             datedecreation = request.POST.get("datedecreation")
-            image = request.POST.get("image")
+            image = request.FILES.get("image")
 
             Traiteur.objects.create(nomcomplet = nomcomplet,description = description,specialites = specialites,adresse = adresse,image = image,email = email,telephone = telephone,datedecreation = datedecreation)
             return redirect('liste_traiteurs')

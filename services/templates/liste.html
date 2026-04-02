@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
+<style>
+.traiteur_main_content{
+  background: url("{%static 'images/banner-caterers' %}") center/cover;
+  background-color: #E65100;
+  background-blend-mode: multiply;
+}
+</style>
 <main>
       <div class="traiteur_main_content">
         <h1>Nos Traiteurs</h1>
@@ -46,7 +54,8 @@
       {% for traiteur in traiteurs %}
 
         <div class="traiteur">
-          <img src="{{ traiteur.image_url|default_if_none:'#' }}" />
+          <div class="traiteur_main">
+            <img src="{{ traiteur.image_url|default_if_none:'#' }}" />
         
             <div class="traiteur_content">
                 <div class="first_line">
@@ -58,13 +67,15 @@
                 <div class="specialite">
                   <p>{{traiteur.specialites}}</p>
                 </div>
-            </div>
-
-            <div class="last_line">
+              <div class="last_line">
                 <p>{{traiteur.telephone}}</p>
-              <button class="see_profile"><a href="{% url 'detail_traiteur' traiteur.id %}">Voir profil</a></button>
+                <button class="see_profile"><a href="{% url 'detail_traiteur' traiteur.id %}">Voir profil</a></button>
+              </div>
             </div>
-        </div>
+          </div>
+          
+
+          
       {% endfor %}
 
 
