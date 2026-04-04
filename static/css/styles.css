@@ -476,7 +476,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    width: 80%;
+    
     padding: 50px;
 }
 
@@ -489,26 +489,21 @@ footer {
 
 
 
-.traiteur {
-    display: flex;
-    flex-direction: row;
-    background-color: #FFF;
-    border-radius: 15px;
-    height: 20vh;
-}
+
 .traiteur {
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 15px;
-    height: 40vh;
+    height: 50%;
+    
 
 }
 .traiteur_main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 70%;
+    width: 30%;
     padding: 5px;
 }
 
@@ -618,7 +613,9 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
 }
 
-
+.traiteur_content{
+    height: 100px;
+}
 .services_traiteur_1 {
     display: flex;
     flex-direction: column;
